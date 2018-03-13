@@ -2,18 +2,8 @@
   <div class="container">
     <nav class="nav">
       <div class="nav-left">
-        <a class="nav-item" href="{{ .Site.BaseURL }}/"><h1 class="title is-4">{{ .Site.Title }}</h1></a>
-      </div>
-      <div class="nav-right">
-        <nav class="nav-item level is-mobile">
-          {{ range .Site.Params.social }}
-          <a class="level-item" href="{{ .url }}">
-            <span class="icon">
-              <i class="fa {{ .fa_icon }}"></i>
-            </span>
-          </a>
-          {{ end }}
-        </nav>
+        <a class="nav-item" href="{{ .Site.BaseURL }}"><h1 class="title is-4">{{ .Site.Title }}</h1></a>
+        <p class="monospace">Notes from a human developer<span class="blink">_</span></p>
       </div>
     </nav>
   </div>

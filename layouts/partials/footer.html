@@ -1,5 +1,16 @@
 <section class="section">
   <div class="container has-text-centered">
+      <div class="">
+        <nav class="black">
+          {{ range .Site.Params.social }}
+          <a class="level-item" href="{{ .url }}">
+            <span class="icon">
+              <i class="fa {{ .fa_icon }}"></i>
+            </span>
+          </a>
+          {{ end }}
+        </nav>
+      </div>
     <p>{{ .Site.Copyright | safeHTML }}</p>
   </div>
 </section>
