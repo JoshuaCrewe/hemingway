@@ -1,5 +1,7 @@
-<body>
+<!DOCTYPE html>
+<html{{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
   {{ partial "header" . }}
+<body>
   {{ partial "nav" . }}
   <section class="section">
     <div class="container">
@@ -16,3 +18,5 @@
   {{ partial "disqus" . }}
   {{ partial "footer" . }}
 </body>
+
+</html>
