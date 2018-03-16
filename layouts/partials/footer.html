@@ -1,12 +1,10 @@
 <section class="section">
-  <div class="container has-text-centered">
+  <div class="container center">
       <div class="">
-        <nav class="black">
+        <nav class="">
           {{ range .Site.Params.social }}
-          <a class="level-item" href="{{ .url }}">
-            <span class="icon">
+          <a class="black hover-grey icon" href="{{ .url }}">
               <i class="fa {{ .fa_icon }}"></i>
-            </span>
           </a>
           {{ end }}
         </nav>
