@@ -6,16 +6,23 @@
         <section class="section">
             <div class="container">
                 {{ range sort .Paginator.Pages }}
-                <article>
-                    <h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>
-                    <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
+                <article class="post">
+                    <a class="title" href="{{ .Permalink }}">
+                        <h1 class="f3 mb2">
+                            {{ .Title }}
+                        </h1> {{ if .Draft }} ::Draft{{ end }}
+                    </a>
+                    <h2 class="grey f7 mb3 monospace">{ {{ .Date.Format "2 January 2006" }} }</h2>
                     {{ if .Params.tags }}
                         {{ partial "tags" .Params.tags }}
                     {{ end }}
-                    <div class="content">
-                        {{ .Summary | plainify | safeHTML }}
+                    <div class="content grey hide">
+                        <p class="f6">
+                            {{ .Summary | plainify | safeHTML }}
+                        </p>
+
                         {{ if .Truncated }}
-                            ...<a class="button is-link" href="{{ .Permalink }}" style="height:28px">
+                            <a class="button" href="{{ .Permalink }}">
                                 Read more
                                 <span class="icon is-small">
                                     <i class="fa fa-angle-double-right"></i>

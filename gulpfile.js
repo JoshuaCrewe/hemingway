@@ -1,19 +1,7 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
+const vennGulp = require('venn-gulp-tasks')
 
-gulp.task("default", function () {
-  gulp.src('sass/style.sass')
-    .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(autoprefixer())
-    .pipe(gulp.dest('static/css/'));
-});
+const config = require('./project.json');
 
-gulp.task("watch", function () {
-  gulp.watch('sass/style.sass', function() {
-    gulp.src('sass/style.sass')
-      .pipe(sass({outputStyle: 'compressed'}))
-      .pipe(autoprefixer())
-      .pipe(gulp.dest('static/css/'));
-  });
-});
+vennGulp.config(config);
+
+vennGulp.run();

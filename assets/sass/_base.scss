@@ -1,0 +1,29 @@
+// Base Styles
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: $body-font;
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-font-smoothing: antialiased;
+
+    background-color: $bg;
+    color: $black;
+    font-weight: 400;
+}
+
+a {
+    transition: all .3s ease-in-out;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 4rem 2rem 2rem;
+}

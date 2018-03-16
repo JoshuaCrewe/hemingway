@@ -1,0 +1,19 @@
+@import 'config';
+@import 'base';
+@import 'reset';
+@import 'type-scale';
+@import 'line-height';
+@import 'type';
+@import 'skins';
+
+@import 'components/buttons';
+@import 'components/icon';
+@import 'components/pagination';
+@import 'components/animation';
+@import 'components/post';
+
+// @import 'node_modules/bulma/bulma';
+
+.hide {
+    display: none;
+}
