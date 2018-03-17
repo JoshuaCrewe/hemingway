@@ -1,22 +1,16 @@
-<!DOCTYPE html>
-<html{{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
-  {{ partial "header" . }}
-<body>
-  {{ partial "nav" . }}
-  <section class="section">
+{{ partial "header" . }}
+{{ partial "nav" . }}
+<section class="section">
     <div class="container">
-      <h1 class="title mb0">{{ .Title }}</h1>
-      <h2 class="grey f7 monospace">{ {{ .Date.Format "2 January 2006" }} }</h2>
-      {{ if .Params.tags }}
-      {{ partial "tags" .Params.tags }}
-      {{ end }}
-      <div class="content">
-        {{ .Content }}
-      </div>
+        <h1 class="title mb0">{{ .Title }}</h1>
+        <h2 class="grey mt0 f7 monospace">{ {{ .Date.Format "2 January 2006" }} }</h2>
+        {{ if .Params.tags }}
+        {{ partial "tags" .Params.tags }}
+        {{ end }}
+        <div class="content">
+            {{ .Content }}
+        </div>
     </div>
-  </section>
-  {{ partial "disqus" . }}
-  {{ partial "footer" . }}
-</body>
-
-</html>
+</section>
+{{ partial "disqus" . }}
+{{ partial "footer" . }}
