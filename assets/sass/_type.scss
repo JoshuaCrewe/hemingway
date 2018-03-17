@@ -5,7 +5,7 @@ h4,
 h5,
 h6 {
     font-family: $title-font;
-    margin-bottom: 1.5rem;
+    margin: 3rem 0 1.5rem;
 
     &:before {
         color: $border;
@@ -21,13 +21,11 @@ h1 {
 h2 {
     font-size: 1.5rem;
     line-height: 1.25;
-    margin-bottom: 1.5rem;
 }
 
 h3 {
     font-size: 1.25rem;
     line-height: 1.25;
-    margin-bottom: 1.5rem;
 }
 
 h4 {
@@ -48,8 +46,8 @@ h6 {
 }
 
 p {
-    font-size: 1.1rem;
-    line-height: 1.25;
+    font-size: 1rem;
+    line-height: 1.5;
     margin-bottom: 1.5rem;
 }
 
@@ -78,6 +76,8 @@ code {
 }
 
 .content {
+    font-family: $title-font;
+
     h1::before { content: "# "; }
     h2::before { content: "## "; }
     h3::before { content: "### "; }
@@ -101,6 +101,10 @@ code {
 
 .mb3 {
 	margin-bottom: 1rem;
+}
+
+.mt0 {
+    margin-top: 0;
 }
 
 .center {

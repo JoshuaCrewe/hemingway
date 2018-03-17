@@ -1,39 +1,35 @@
-<!DOCTYPE html>
-<html{{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
-    {{ partial "header" . }}
-    <body>
-        {{ partial "nav" . }}
-        <section class="section">
-            <div class="container">
-                {{ range sort .Paginator.Pages }}
-                <article class="post">
-                    <a class="title" href="{{ .Permalink }}">
-                        <h1 class="f3 mb2">
-                            {{ .Title }}
-                        </h1> {{ if .Draft }} ::Draft{{ end }}
-                    </a>
-                    <h2 class="grey f7 mb3 monospace">{ {{ .Date.Format "2 January 2006" }} }</h2>
-                    {{ if .Params.tags }}
-                        {{ partial "tags" .Params.tags }}
-                    {{ end }}
-                    <div class="content grey hide">
-                        <p class="f6">
-                            {{ .Summary | plainify | safeHTML }}
-                        </p>
-
-                        {{ if .Truncated }}
-                            <a class="button" href="{{ .Permalink }}">
-                                Read more
-                                <span class="icon is-small">
-                                    <i class="fa fa-angle-double-right"></i>
-                                </span>
-                            </a>
-                        {{ end }}
-                    </div>
-                </article>
+{{ partial "header" . }}
+{{ partial "nav" . }}
+<section class="section">
+    <div class="container">
+        {{ range sort .Paginator.Pages }}
+        <article class="post">
+            <a class="title" href="{{ .Permalink }}">
+                <h1 class="f3 mb2">
+                    {{ .Title }}
+                </h1> {{ if .Draft }} ::Draft{{ end }}
+            </a>
+            <h2 class="grey f7 mb3 mt0 monospace">{ {{ .Date.Format "2 January 2006" }} }</h2>
+            {{ if .Params.tags }}
+            {{ partial "tags" .Params.tags }}
             {{ end }}
-        </div>
-  </section>
-  {{ partial "pager" . }}
-  {{ partial "footer" . }}
-</body>
+            <div class="content grey hide">
+                <p class="f6">
+                    {{ .Summary | plainify | safeHTML }}
+                </p>
+
+                {{ if .Truncated }}
+                <a class="button" href="{{ .Permalink }}">
+                    Read more
+                    <span class="icon is-small">
+                        <i class="fa fa-angle-double-right"></i>
+                    </span>
+                </a>
+                {{ end }}
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</section>
+{{ partial "pager" . }}
+{{ partial "footer" . }}
