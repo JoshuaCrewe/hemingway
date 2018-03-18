@@ -19,12 +19,9 @@ a {
     transition: all .3s ease-in-out;
 }
 
-.container {
+.wrap {
     max-width: 620px;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-}
-
-.section {
-    padding: 4rem 2rem 2rem;
+    position: relative;
 }

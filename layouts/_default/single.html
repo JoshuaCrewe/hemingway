@@ -1,11 +1,9 @@
 {{ partial "header" . }}
-{{ partial "nav" . }}
+{{ partial "page-header" . }}
 <section class="section">
     <div class="container">
-        <h1 class="title mb0">{{ .Title }}</h1>
-        <h2 class="grey mt0 f7 monospace">{ {{ .Date.Format "2 January 2006" }} }</h2>
         {{ if .Params.tags }}
-        {{ partial "tags" .Params.tags }}
+            {{ partial "tags" .Params.tags }}
         {{ end }}
         <div class="content">
             {{ .Content }}
