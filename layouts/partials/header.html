@@ -9,11 +9,11 @@
         <meta content="{{ delimit .Keywords ", " }}" name="keywords">
         <meta content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}" property="og:title">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}img/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}img/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}img/favicon/favicon-16x16.png">
-        <link rel="manifest" href="{{ .Site.BaseURL }}img/favicon/site.webmanifest">
-        <link rel="mask-icon" href="{{ .Site.BaseURL }}img/favicon/safari-pinned-tab.svg" color="#444444">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}/img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="{{ .Site.BaseURL }}/img/favicon/site.webmanifest">
+        <link rel="mask-icon" href="{{ .Site.BaseURL }}/img/favicon/safari-pinned-tab.svg" color="#444444">
         <meta name="msapplication-TileColor" content="#444444">
         <meta name="theme-color" content="#ffffff">
 
@@ -26,7 +26,7 @@
         {{ end }}
 
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" href="{{ .Site.BaseURL }}css/app.min.css">
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/app.min.css">
 
     </head>
     <body>
