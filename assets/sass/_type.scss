@@ -5,7 +5,7 @@ h4,
 h5,
 h6 {
     font-family: $title-font;
-    margin: 3rem 0 1.5rem;
+    margin: 2.25rem 0 1.5rem;
 
     &:before {
         color: $border;
@@ -78,12 +78,12 @@ code {
 .content {
     font-family: $title-font;
 
-    h1::before { content: "# "; }
-    h2::before { content: "## "; }
-    h3::before { content: "### "; }
-    h4::before { content: "#### "; }
-    h5::before { content: "##### "; }
-    h6::before { content: "###### "; }
+    // h1::before { content: "# "; }
+    // h2::before { content: "## "; }
+    // h3::before { content: "### "; }
+    // h4::before { content: "#### "; }
+    // h5::before { content: "##### "; }
+    // h6::before { content: "###### "; }
 
 }
 
