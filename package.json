@@ -1,7 +1,6 @@
 {
   "name": "hemingway",
   "devDependencies": {
-    "bulma": "^0.1.2",
     "venn-gulp-tasks": "git+ssh://git@bitbucket.org/venncreative/gulp.git"
   }
 }

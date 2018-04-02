@@ -24,6 +24,7 @@
 .hljs-template-variable,
 .hljs-strong,
 .hljs-emphasis,
+.hljs-built_in,
 .hljs-quote {
     color: #87afaf;
 }
@@ -48,7 +49,8 @@
 }
 
 .hljs-tag {
-    color: #3a3a3a;
+    // color: #3a3a3a;
+    color: #d0d0d0;
 }
 
 .hljs-title,
