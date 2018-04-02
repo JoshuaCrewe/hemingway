@@ -3,8 +3,10 @@
                     <div class="">
                         <nav class="">
                             {{ range .Site.Params.social }}
-                                <a class="black hover-grey icon" href="{{ .url }}">
-                                    <i class="fa {{ .fa_icon }}"></i>
+                                <a class="black icon" href="{{ .url }}">
+                                    <svg class="ion-icon">
+                                        <use xlink:href="#{{ .ion_icon }}"></use>
+                                    </svg>
                                 </a>
                             {{ end }}
                         </nav>
@@ -26,10 +28,6 @@
         {{ end }}
 
         <script>hljs.initHighlightingOnLoad();</script>
-
-        {{ if .Site.GoogleAnalytics }}
-            {{ template "_internal/google_analytics_async.html" . }}
-        {{ end }}
 
     </body>
 </html>
