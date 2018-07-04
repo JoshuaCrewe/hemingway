@@ -24,12 +24,12 @@
 .hljs-template-variable,
 .hljs-strong,
 .hljs-emphasis,
-.hljs-built_in,
 .hljs-quote {
     color: #87afaf;
 }
 
 .hljs-selector-tag,
+.hljs-built_in,
 .hljs-type {
     color: #ffafaf;
 }
@@ -73,4 +73,8 @@
 
 .hljs-link {
     text-decoration: underline;
+}
+
+.content code {
+    line-height: 1.2;
 }
